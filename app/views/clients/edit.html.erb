@@ -1,0 +1,14 @@
+<h1>Редактирование личных данных клиента</h1>
+<%= form_for @user do |f| %>
+  <div>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>

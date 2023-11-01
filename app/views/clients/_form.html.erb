@@ -1,3 +1,4 @@
+<div id="registrationMessage"></div>
 <%= form_with(model: @client, local: true, html: {class: 'registrationForm', id: 'registrationForm' }) do |form| %>
   <div class="field">
     <%= form.label :full_name %>
@@ -26,5 +27,6 @@
 
   <div class="actions">
     <%= form.submit %>
+    <button type="button" id="registrationCancelButton">Отмена</button>
   </div>
 <% end %>
