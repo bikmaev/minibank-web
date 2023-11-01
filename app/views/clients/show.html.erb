@@ -1,0 +1,15 @@
+
+<h1>Персональные данные пользователя</h1>
+<% if @client %>
+  <p>ФИО: <%= @client['full_name'] %></p> <!-- Предполагая, что у пользователя есть атрибут full_name -->
+  <p>Email: <%= @client['email'] %></p>
+<% else %>
+  <p>Пользователь не найден</p>
+<% end %>
+
+<% @client.accounts.each do |account| %>
+  <div>
+    <p>Номер счета: <%= account.account_number %></p>
+    <p>Баланс: <%= account.balance %></p>
+  </div>
+<% end %>
